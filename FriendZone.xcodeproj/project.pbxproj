@@ -16,6 +16,9 @@
 		4624FFFF23F02D24007454EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4624FFFD23F02D24007454EA /* Main.storyboard */; };
 		4693CB8223F84D95004C7EC7 /* Int-Time Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4693CB8123F84D95004C7EC7 /* Int-Time Formatting.swift */; };
 		46991C7B23F03AC70041C8BC /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46991C7A23F03AC70041C8BC /* FriendViewController.swift */; };
+		469A7F0123F97B2700720BFA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469A7F0023F97B2700720BFA /* Coordinator.swift */; };
+		469A7F0323F97B9400720BFA /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469A7F0223F97B9400720BFA /* MainCoordinator.swift */; };
+		469A7F0523F97EE300720BFA /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469A7F0423F97EE300720BFA /* Storyboarded.swift */; };
 		46D55A8923F03CA7002E19BE /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D55A8823F03CA7002E19BE /* TextTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +34,9 @@
 		4624FFFE23F02D24007454EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4693CB8123F84D95004C7EC7 /* Int-Time Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int-Time Formatting.swift"; sourceTree = "<group>"; };
 		46991C7A23F03AC70041C8BC /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
+		469A7F0023F97B2700720BFA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		469A7F0223F97B9400720BFA /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		469A7F0423F97EE300720BFA /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		46D55A8823F03CA7002E19BE /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +70,9 @@
 		4624FFF623F02D24007454EA /* FriendZone */ = {
 			isa = PBXGroup;
 			children = (
+				469A7F0023F97B2700720BFA /* Coordinator.swift */,
+				469A7F0223F97B9400720BFA /* MainCoordinator.swift */,
+				469A7F0423F97EE300720BFA /* Storyboarded.swift */,
 				46991C7A23F03AC70041C8BC /* FriendViewController.swift */,
 				4693CB8123F84D95004C7EC7 /* Int-Time Formatting.swift */,
 				4624FFF723F02D24007454EA /* AppDelegate.swift */,
@@ -150,12 +159,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				469A7F0123F97B2700720BFA /* Coordinator.swift in Sources */,
 				4693CB8223F84D95004C7EC7 /* Int-Time Formatting.swift in Sources */,
 				46D55A8923F03CA7002E19BE /* TextTableViewCell.swift in Sources */,
 				4624FFFC23F02D24007454EA /* ViewController.swift in Sources */,
 				4624FFF823F02D24007454EA /* AppDelegate.swift in Sources */,
 				4624FFFA23F02D24007454EA /* SceneDelegate.swift in Sources */,
 				4624000C23F02DCA007454EA /* Friend.swift in Sources */,
+				469A7F0523F97EE300720BFA /* Storyboarded.swift in Sources */,
+				469A7F0323F97B9400720BFA /* MainCoordinator.swift in Sources */,
 				46991C7B23F03AC70041C8BC /* FriendViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

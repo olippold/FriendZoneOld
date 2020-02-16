@@ -8,9 +8,10 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
+class ViewController: UITableViewController, Storyboarded {
     var friends = [Friend]()
     var selectedFriend = -1
+    weak var coordinator: MainCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,8 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        configure(friend: friends[indexPath.row], position: indexPath.row)
+        selectedFriend = indexPath.row
+        coordinator?.configure(friend: friends[indexPath.row])
     }
     
     
@@ -48,7 +50,8 @@ class ViewController: UITableViewController {
         friends.append(friend)
         tableView.insertRows(at: [IndexPath(row: friends.count - 1, section: 0)], with: .automatic)
         saveData()
-        configure(friend: friend, position: friends.count - 1)
+        selectedFriend = friends.count - 1
+        coordinator?.configure(friend: friend)
     }
     
     func loadData() {
@@ -72,18 +75,6 @@ class ViewController: UITableViewController {
         }
         
         defaults.set(savedData, forKey: "Friends")
-    }
-    
-    func configure(friend: Friend, position: Int) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "FriendViewController") as? FriendViewController else {
-            fatalError("Unable to find FriendViewController")
-        }
-        
-        selectedFriend = position
-        vc.delegate = self
-        vc.friend = friend
-        navigationController?.pushViewController(vc, animated: true)
-        
     }
     
     func update(friend: Friend) {
